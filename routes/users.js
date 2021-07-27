@@ -1,8 +1,15 @@
 const {  User , validateUser } = require("../models/user");
 const _ = require("lodash");
+const auth = require('../middleware/auth');
 const bcrypt = require("bcrypt");
 const express = require('express');
 const router = express.Router();
+
+// getting the current user checknto see whether user is authorized
+router.get('/me', auth , async (req ,res) => {
+     const user = await  User.findById(req.user._id).select("-password"); 
+     res.send(user);
+});
 
 router.post('/',async (req,res) => {
     const { error } = validateUser(req.body);

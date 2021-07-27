@@ -10,8 +10,10 @@ const rentals = require("./routes/rentals");
 const users = require("./routes/users");
 const auth = require("./routes/auth");
 const express = require('express');
+const error = require("./middleware/error");
 const app = express();
 
+// check whether the environment variable is set or not 
 if(!config.get("jwtPrivateKey")){
     console.error("FATAL ERROR jwtPrivateKey is not defined.");
     process.exit(1);
@@ -32,6 +34,9 @@ app.use('/api/movies',movies);
 app.use('/api/rentals',rentals);
 app.use('/api/users',users);
 app.use('/api/auth', auth);
+
+//logging error middleware in express
+app.use(error);
 
 // environment variables and this heps to set the port dynamically
 const port = process.env.PORT || 3400;
