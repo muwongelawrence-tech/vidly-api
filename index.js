@@ -1,3 +1,6 @@
+require("express-async-errors");
+const winston = require("winston");
+require("winston-mongodb");
 const Joi = require("joi");
 Joi.objectId = require("joi-objectid")(Joi);
 const mongoose = require("mongoose");
@@ -12,6 +15,9 @@ const auth = require("./routes/auth");
 const express = require('express');
 const error = require("./middleware/error");
 const app = express();
+
+winston.add(winston.transports.File,{filename:"logfile.log"});
+winston.add(winston.transports.MongoDB,{ db:"mongodb://localhost/vidly"});
 
 // check whether the environment variable is set or not 
 if(!config.get("jwtPrivateKey")){
