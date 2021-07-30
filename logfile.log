@@ -1,3 +1,5 @@
 {"level":"error","message":"could not get the genres","timestamp":"2021-07-28T20:31:49.632Z"}
 {"level":"error","message":"could not get the genres","timestamp":"2021-07-28T20:59:59.555Z"}
 {"level":"error","message":"could not get the genres","timestamp":"2021-07-28T21:00:02.475Z"}
+{"message":"Something failed during start up.","stack":"Error: Something failed during start up.\n    at Object.<anonymous> (/home/lawrencepro/Desktop/vidly-api-demo/index.js:28:7)\n    at Module._compile (node:internal/modules/cjs/loader:1109:14)\n    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)\n    at Module.load (node:internal/modules/cjs/loader:989:32)\n    at Function.Module._load (node:internal/modules/cjs/loader:829:14)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)\n    at node:internal/main/run_main_module:17:47","level":"error","timestamp":"2021-07-30T20:49:53.325Z"}
+{"level":"info","message":"connected to Mongodb ....","timestamp":"2021-07-30T21:33:09.135Z"}
