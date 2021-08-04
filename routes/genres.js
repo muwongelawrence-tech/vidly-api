@@ -2,24 +2,27 @@ const { Genre , validateGenre } = require("../models/genre");
 const auth = require("../middleware/auth");
 const admin = require("../middleware/admin");
 const asyncMiddleware = require("../middleware/async");
+const validateObjectId = require("../middleware/validateObjectId");
 const express = require('express');
+const mongoose = require("mongoose");
 const router = express.Router();
 
 router.get('/',async (req,res) => {
   
   const genres = await Genre.find().sort("name");
+
   res.send(genres);
 });
 
 //getting  agenre with a specific id
-router.get('/:id',async (req,res) => {
+router.get('/:id',validateObjectId ,async (req,res) => {
 
     const genre = await Genre.findById(req.params.id);
 
     if(!genre) return res.status(404).send("The genre with this id doesnot exist in the database.");
     
     res.send(genre); 
-  });
+});
 
   
 // posting requests or creating new resources
