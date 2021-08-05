@@ -15,7 +15,7 @@ router.get('/',async (req,res) => {
 });
 
 //getting  agenre with a specific id
-router.get('/:id',validateObjectId ,async (req,res) => {
+router.get('/:id', validateObjectId , async (req,res) => {
 
     const genre = await Genre.findById(req.params.id);
 
@@ -41,9 +41,10 @@ router.get('/:id',validateObjectId ,async (req,res) => {
 
   // updating requests
 
-  router.put('/:id', async (req,res) => {
+  router.put('/:id' , auth ,async (req,res) => {
      //vaidating
     const { error } = validateGenre(req.body);
+    
     if(error) return res.status(400).send(error.details[0].message);
 
     const genre = await Genre.findByIdAndUpdate(req.params.id,{ name :req.body.name},{new:true});
