@@ -10,12 +10,13 @@ describe("/api/genres" ,() => {
     beforeEach(() => { server = require("../../index");});
 
     afterEach( async () => {
-        await server.close();
+           await server.close();
          await Genre.remove({});
          
     });
 
     describe("GET /" ,  () => {
+
         it("should return all genres" , async () => {
            await Genre.collection.insertMany([
                 {name: "genre1"},
@@ -176,8 +177,7 @@ describe("/api/genres" ,() => {
             });
         
             it('should return 404 if id is invalid', async () => {
-              id = 1;
-        
+              id = "";
               const res = await exec();
         
               expect(res.status).toBe(404);
@@ -248,7 +248,7 @@ describe("/api/genres" ,() => {
             });
         
             it('should return 404 if id is invalid', async () => {
-              id = 1; 
+              id = ""; 
               
               const res = await exec();
         
