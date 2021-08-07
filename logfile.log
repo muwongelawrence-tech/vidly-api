@@ -5184,3 +5184,5 @@
 {"level":"info","message":"listening on port 3400..........","timestamp":"2021-08-07T21:43:09.932Z"}
 {"level":"info","message":"connected to mongodb://localhost/vidly_tests ....","timestamp":"2021-08-07T21:43:09.972Z"}
 {"level":"info","message":"connected to mongodb://localhost/vidly_tests ....","timestamp":"2021-08-07T21:43:09.912Z"}
+{"level":"info","message":"listening on port 3400..........","timestamp":"2021-08-07T22:26:43.270Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly ....","timestamp":"2021-08-07T22:26:43.307Z"}
