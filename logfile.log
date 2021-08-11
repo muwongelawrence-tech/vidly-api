@@ -5204,3 +5204,12 @@
 {"level":"info","message":"listening on port 3400..........","timestamp":"2021-08-10T11:38:59.259Z"}
 {"level":"info","message":"connected to mongodb://localhost/vidly_tests ....","timestamp":"2021-08-10T11:38:59.311Z"}
 {"level":"info","message":"connected to mongodb://localhost/vidly_tests ....","timestamp":"2021-08-10T11:38:59.601Z"}
+{"level":"info","message":"listening on port 3400..........","timestamp":"2021-08-11T18:38:57.103Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly_tests ....","timestamp":"2021-08-11T18:38:57.134Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly_tests ....","timestamp":"2021-08-11T18:38:57.152Z"}
+{"level":"info","message":"listening on port 3400..........","timestamp":"2021-08-11T18:38:57.228Z"}
+{"level":"error","message":"Cannot set headers after they are sent to the client","timestamp":"2021-08-11T18:38:57.652Z"}
+{"level":"error","message":"Cannot set headers after they are sent to the client","timestamp":"2021-08-11T18:38:57.763Z"}
+{"level":"info","message":"listening on port 3400..........","timestamp":"2021-08-11T18:38:58.994Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly_tests ....","timestamp":"2021-08-11T18:38:59.032Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly_tests ....","timestamp":"2021-08-11T18:38:59.372Z"}
